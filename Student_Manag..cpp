@@ -2,7 +2,6 @@
 #include <fstream>
 #include <windows.h>
 #include <sstream>
-using namespace std;
 
 class Student{
 private:
@@ -135,45 +134,45 @@ in.close();
 remove("D:/Student.txt");
 rename("D:/Student Temp.txt", "D:/Student.txt");
 }
-
+using namespace std;
 int main(){
-Student s;
-bool exit = false;
-while(!exit){
-system("cls");
-cout << "Welcome To Student Management System" << endl;
-cout << "************************************" << endl;
-cout << "1.Add Student." << endl;
-cout << "2.Search Student." << endl;
-cout << "3.Update Student." << endl;
-cout << "4.Exit" <<endl;
-cout << "Enter Choice: ";
-int val;
-cin >> val;
+        Student s;
+        bool exit = false;
+        while(!exit){
+                system("cls");
+                cout << "Welcome To Student Management System" << endl;
+                cout << "************************************" << endl;
+                cout << "1.Add Student." << endl;
+                cout << "2.Search Student." << endl;
+                cout << "3.Update Student." << endl;
+                cout << "4.Exit" <<endl;
+                cout << "Enter Choice: ";
+                int val;
+                cin >> val;
 
-if(val==1){
-system("cls");
-addStudent(s);
-Sleep(4000);
-}
+                if(val==1){
+                        system("cls");
+                        addStudent(s);
+                        Sleep(4000);
+                }
+                else if(val==2){
+                        system("cls");
+                        search(s);
+                        Sleep(5000);	
+                }
 
-else if(val==2){
-system("cls");
-search(s);
-Sleep(5000);	
-}
+                else if(val==3){
+                system("cls");
+                update();
+                Sleep(5000);	
+                }
 
-else if(val==3){
-system("cls");
-update();
-Sleep(5000);	
-}
-
-else if(val==4){
-	system("cls");
-	exit = true;
-	cout<<"Good Luck!";
-	Sleep(3000);
-}
-}
+                else if(val==4){
+	        system("cls");
+	        exit = true;
+	        cout<<"Good Luck!";
+	        Sleep(3000);
+                }
+        }
+	return 0;
 }
